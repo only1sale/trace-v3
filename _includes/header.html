@@ -1,0 +1,16 @@
+<header id="header-wrapper">
+    <div id="header" class="container platform-header">
+        <a class="trace-brand" href="{{ '/o-nama/' | relative_url }}" aria-label="TRACE">
+            <img class="image featured" src="{{ '/assets/images/trace-logo.png' | relative_url }}" alt="TRACE" />
+        </a>
+
+        <a class="country-brand" href="{{ '/' | relative_url }}" aria-label="Početna strana platforme Srbija">
+            <span class="country-flag" aria-hidden="true">🇷🇸</span>
+            <span>SRBIJA</span>
+        </a>
+
+        {% include navigation.html %}
+    </div>
+
+    {% include hero.html %}
+</header>

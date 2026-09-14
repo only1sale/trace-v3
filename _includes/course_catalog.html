@@ -1,0 +1,22 @@
+{% assign catalogue = site.data.courses %}
+{% if catalogue %}
+<div class="course-catalog">
+  {% if catalogue.intro %}<p class="course-catalog-intro">{{ catalogue.intro }}</p>{% endif %}
+  <div class="course-card-grid{% if catalogue.courses.size == 1 %} course-card-grid-single{% endif %}">
+    {% for course in catalogue.courses %}
+    <article class="course-card">
+      {% if course.image %}
+      <a class="course-card-image" href="{{ course.url }}" target="_blank" rel="noopener">
+        <img class="image featured" src="{{ course.image | relative_url }}" alt="{{ course.image_alt | default: course.title | escape }}" loading="lazy">
+      </a>
+      {% endif %}
+      <div class="course-card-body">
+        <h2>{{ course.title }}</h2>
+        <p>{{ course.description }}</p>
+        <a class="button course-card-link" href="{{ course.url }}" target="_blank" rel="noopener">{{ catalogue.link_label }} →</a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

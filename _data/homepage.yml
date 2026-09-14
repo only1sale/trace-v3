@@ -1,0 +1,36 @@
+external_heading: Važne informacije i alati
+external_intro: Pouzdani izvori i praktični alati koji mogu pomoći u prevenciji, ranom otkrivanju i snalaženju kroz zdravstveni sistem.
+external_cards:
+- title: Skrining raka u Srbiji
+  text: Besplatan pregled kojim se kod ljudi bez simptoma traže rane promene ili znaci raka kako bi se bolest otkrila na vreme ili sprečila. Proverite zvanični sajt.
+  url: https://www.skriningsrbija.rs
+  image: /assets/images/serbia-network/screening-callout.png
+- title: ONKO
+  text: Mobilna aplikacija Instituta za onkologiju i radiologiju Srbije nudi informacije o raku, lečenju raka i podršci.
+  image: /assets/images/serbia-network/onko-app.png
+  url: https://rak-dojke.com/
+- title: ONKO VODIČ
+  text: Vaš vodič kroz rak dojke, jasno i korak po korak. Pomoć u snalaženju kroz državni zdravstveni sistem Srbije — ustanove, pregledi i objašnjenja medicinskih pojmova na jednom mestu.
+  url: https://rak-dojke.com/mapa
+  image: /assets/uploads/1000012843.jpg
+heading: Istražite sadržaj platforme
+intro: Najvažniji sadržaji platforme na jednom mestu.
+cards:
+- title: Koji preventivni pregled (skrining) je namenjen meni?
+  text: Saznajte koji organizovani programi skrininga odgovaraju vašem uzrastu i polu.
+  url: /koji-skrining-je-za-mene/
+  image: /assets/images/serbia-network/purple-ribbon.jpeg
+- title: Edukativni materijali za građane
+  text: Praktični i razumljivi materijali namenjeni građanima.
+  url: /edukativni-materijali/
+  image: /assets/images/trace-general/trace-3.jpg
+- title: Onkološki zdravstveni centri Srbije
+  text: Pregled važnih onkoloških ustanova i informacija o zdravstvenim centrima u Srbiji.
+  url: /mreza-organizacija-u-srbiji/#onkoloski-centri
+  image: /assets/images/serbia-network/mobile-mammography.png
+- title: Reč stručnjaka iz oblasti
+  text: Stručna objašnjenja i tekstovi o prevenciji raka, dijagnostici, lečenju i zdravstvenoj pismenosti.
+  url: /rec-strucnjaka/
+  image: /assets/uploads/pexels-tara-winstead-7723572.jpg
+news_callout: Pratite akcije preventivnih pregleda koje organizuje Kancelarija za skrining raka Republike Srbije.
+news_callout_url: https://www.skriningsrbija.rs

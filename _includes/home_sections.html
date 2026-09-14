@@ -1,0 +1,35 @@
+{% assign homepage = site.data.homepage %}
+{% assign more_label = "Saznajte više" %}
+{% if homepage %}
+{% if homepage.external_cards %}
+<section class="home-priority wrapper" aria-labelledby="home-priority-title">
+  <div class="container">
+    <header class="section-heading">
+      <h2 id="home-priority-title">{{ homepage.external_heading }}</h2>
+      <p>{{ homepage.external_intro }}</p>
+    </header>
+    <div class="priority-card-grid">
+      {% for card in homepage.external_cards %}
+        {% if card.url %}<a class="priority-card" href="{{ card.url }}" target="_blank" rel="noopener">{% else %}<article class="priority-card priority-card-static">{% endif %}
+          {% if card.image %}<div class="priority-card-image"><img class="image featured" src="{{ card.image | relative_url }}" alt="" loading="lazy"></div>{% endif %}
+          <div class="priority-card-body"><h3>{{ card.title }}</h3><p>{{ card.text }}</p>{% if card.url %}<span class="card-link">{{ more_label }} →</span>{% endif %}</div>
+        {% if card.url %}</a>{% else %}</article>{% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+<section class="home-explore wrapper" aria-labelledby="home-explore-title">
+  <div class="container">
+    <header class="section-heading"><h2 id="home-explore-title">{{ homepage.heading }}</h2><p>{{ homepage.intro }}</p></header>
+    <div class="platform-card-grid platform-card-grid-featured">
+      {% for card in homepage.cards %}
+        <a class="platform-card platform-card-with-image" href="{{ card.url | relative_url }}">
+          {% if card.image %}<div class="platform-card-image"><img class="image featured" src="{{ card.image | relative_url }}" alt="" loading="lazy"></div>{% endif %}
+          <div class="platform-card-body"><h3>{{ card.title }}</h3><p>{{ card.text }}</p><span class="card-link" aria-hidden="true">{{ more_label }} →</span></div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

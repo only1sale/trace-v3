@@ -1,0 +1,188 @@
+projects:
+- title: Funkcionalna dijagnostika kod nesitnoćelijskog karcinoma pluća – novi koncept za unapređenje personalizovane terapije kod pacijenata u Srbiji
+  acronym: TargetedResponse
+  duration: 3 godine
+  years: 2022-2025
+  abstract: Razvija platformu za funkcionalnu dijagnostiku zasnovanu na kulturama tumorskih i stromalnih ćelija dobijenih od pacijenata sa nesitnoćelijskim karcinomom pluća (NSCLC), radi profilisanja transportera multirezistencije na lekove i efikasnosti inhibitora tirozin-kinaza, u cilju usmeravanja personalizovane terapije za pacijente sa karcinomom pluća u Srbiji.
+  link: https://targetedresponse.ibiss.bg.ac.rs/
+  image_source: https://targetedresponse.ibiss.bg.ac.rs/wp-content/uploads/2022/03/logo_bezPozadine.png
+  image: /assets/images/projects/sr/01-targetedresponse.png
+  image_type: project
+  image_alt: TargetedResponse
+  number: 1
+- title: 'Istraživanje novih pravaca u proučavanju karcinoma dojke: redoks i metaboličko reprogramiranje tumora i pridruženog masnog tkiva'
+  acronym: REFRAME
+  duration: 3 godine
+  years: 2022-2025
+  abstract: Proučava redoks i metaboličko reprogramiranje kao obeležja maligne transformacije karcinoma dojke i međusobnu komunikaciju između tumorskih ćelija i okolnog masnog tkiva, sa ciljem da se utvrdi kako narušavanje interakcija između tumora i masnog tkiva može zaustaviti progresiju i rezistenciju na terapiju i otkriti nove terapijske mete.
+  link: https://www.ibiss.bg.ac.rs/en/research/projects/national/2256-reframe
+  image_source: https://www.ibiss.bg.ac.rs/images/IBISS/Dogadjanja/2022/ReFrame/reframe_2.png
+  image: /assets/images/projects/sr/02-reframe.png
+  image_type: project
+  image_alt: REFRAME
+  number: 2
+- title: Biomimetičko inženjerstvo tumora za unapređenje otkrivanja lekova
+  acronym: BioengineeredTumor
+  duration: 2 godine
+  years: 2024-2026
+  abstract: Razvija 3D in-vitro biomimetičke modele tumora (inženjerski dizajnirano tkivo, uključujući kulture osteosarkoma) koji oponašaju mikrookruženje tumora, kako bi se obezbedile pouzdanije platforme za skrining i otkrivanje antikancerskih lekova.
+  link: https://bioengineeredtumor.com/
+  image_source: https://bioengineeredtumor.com/
+  image: /assets/images/projects/sr/03-bioengineeredtumor.png
+  image_type: project
+  image_alt: BioengineeredTumor
+  number: 3
+- title: Praćenje genetičkog i epigenetičkog profila slobodne cirkulišuće DNK tokom progresije karcinoma
+  acronym: TRACEPIGEN
+  duration: 2 godine
+  years: 2020-2022
+  abstract: Analizira slobodnu cirkulišuću DNK (cfDNK) radi praćenja promena u genetičkom i epigenetičkom profilu tumora tokom sistemske terapije, sa ciljem identifikacije biomarkera za dinamičko, neinvazivno praćenje progresije karcinoma i odgovora na lečenje.
+  link: https://www.tracepigen.com/
+  image_source: https://www.tracepigen.com/
+  image: /assets/images/projects/sr/04-tracepigen.png
+  image_type: project
+  image_alt: TRACEPIGEN
+  number: 4
+- title: Biosenzori za karcinom zasnovani na regulatornim elementima gena
+  acronym: SENSOGENE
+  duration: 2 godine
+  years: 2020-2022
+  abstract: Razvija biosenzore zasnovane na regulatornim elementima gena i istražuje njihov potencijal za primenu u dijagnostici karcinoma, kombinujući molekularnu biologiju regulacije gena sa tehnologijom biosenzora.
+  link: https://imgge.bg.ac.rs/en/research/projects-imgge/projects?view=article&layout=edit&id=2176
+  image_source: https://imgge.bg.ac.rs/templates/yootheme/cache/70/imggi-mali-707e7bc2.png
+  image: /assets/images/projects/sr/05-sensogene.png
+  image_type: project
+  image_alt: SENSOGENE
+  number: 5
+- title: 'Utvrđivanje potencijala derivata placentnog tkiva za rekonstrukciju dojke nakon mastektomije: razvoj 3D-štampanog bioskafolda'
+  acronym: AmnioPrintCare
+  duration: 2 godine
+  years: 2024-2026
+  abstract: Istražuje derivate placentnog (amnionskog) tkiva radi izrade 3D-štampanog bioskafolda za rekonstrukciju dojke nakon mastektomije, sa ciljem poboljšanja kvaliteta života i estetskih rezultata i smanjenja komplikacija kod pacijentkinja sa karcinomom dojke.
+  link: https://amnioprintcare.imi.bg.ac.rs/
+  image_source: ''
+  image: /assets/images/projects/sr/06-amnioprintcare.png
+  image_type: project
+  image_alt: AmnioPrintCare
+  number: 6
+- title: Profilisanje genetike i regulacije ORC-a u karcinomu
+  acronym: ProORC
+  duration: 2 godine
+  years: 2020-2022
+  abstract: Istražuje mutacije povezane sa kompleksom za prepoznavanje početka replikacije (ORC) kod različitih tipova tumora korišćenjem velikih skupova podataka o genomu karcinoma (PCAWG), proširuje anotacije replikacije DNK i gradi regulatornu mrežu ORC-a, sa značajem za dijagnostiku i lečenje karcinoma.
+  link: https://imgge.bg.ac.rs/en/research/projects-imgge/projects?view=article&layout=edit&id=2793:proorc-profiling-orc-genetics-and-regulation-in-cancer&catid=47
+  image_source: https://imgge.bg.ac.rs/templates/yootheme/cache/70/imggi-mali-707e7bc2.png
+  image: /assets/images/projects/sr/07-proorc.png
+  image_type: project
+  image_alt: ProORC
+  number: 7
+- title: 'Repopulacija tumora vođena inflamacijom: seme progresije i platforma za terapiju'
+  acronym: ADVANCED
+  duration: 3 godine
+  years: 2024-2027
+  abstract: Istražuje kako inflamacija podstiče repopulaciju tumora nakon terapije – ćelijsko „seme” progresije – i koristi ta saznanja kao platformu za osmišljavanje novih terapijskih pristupa.
+  link: https://www.projectadvanced.rs/
+  image_source: https://www.projectadvanced.rs/
+  image: /assets/images/projects/sr/08-advanced.jpeg
+  image_type: project
+  image_alt: ADVANCED
+  number: 8
+- title: Molekularna osnova odgovora na hemioradioterapiju kod karcinoma rektuma
+  acronym: MOHERATEKA
+  duration: 3 godine
+  years: 2019-2022
+  abstract: Proučava molekularne determinante odgovora pacijenata sa karcinomom rektuma na hemioradioterapiju, sa ciljem boljeg predviđanja i individualizacije lečenja.
+  link: https://imgge.bg.ac.rs/en/research/projects-imgge/projects?view=article&layout=edit&id=1901
+  image_source: https://imgge.bg.ac.rs/templates/yootheme/cache/70/imggi-mali-707e7bc2.png
+  image: /assets/images/projects/sr/09-moherateka.png
+  image_type: project
+  image_alt: MOHERATEKA
+  number: 9
+- title: Ispitivanje mogućnosti primene direktnih inhibitora trombina u terapiji karcinoma debelog creva
+  acronym: thrombin-colon
+  duration: 1 godina
+  years: 2020-2021
+  abstract: Istražuje da li se direktni inhibitori trombina mogu prenameniti kao terapijski pristup kod karcinoma debelog creva, povezujući puteve koagulacije sa biologijom tumora.
+  link: https://imgge.bg.ac.rs/en/research/projects-imgge/projects?view=article&layout=edit&id=2445:examination-of-possible-applications-of-direct-thrombin-inhibitors-in-the-therapy-of-colon-cancer&catid=47
+  image_source: https://imgge.bg.ac.rs/templates/yootheme/cache/70/imggi-mali-707e7bc2.png
+  image: /assets/images/projects/sr/10-thrombin-colon.png
+  image_type: project
+  image_alt: thrombin-colon
+  number: 10
+- title: Efekti miR-219 i miR-221 na radiosenzitivnost ćelija glioblastoma
+  acronym: miR-glioblastoma
+  duration: 1 godina
+  years: 2021-2022
+  abstract: Ispituje kako mikroRNK miR-219 i miR-221 modulišu radiosenzitivnost ćelija glioblastoma, sa značajem za poboljšanje odgovora na radioterapiju.
+  link: https://imgge.bg.ac.rs/en/research/projects-imgge/projects?view=article&layout=edit&id=2404:effects-of-mir-219-and-mir-221on-radiosensitivity-of-glioblastoma-cells&catid=47
+  image_source: https://imgge.bg.ac.rs/templates/yootheme/cache/70/imggi-mali-707e7bc2.png
+  image: /assets/images/projects/sr/11-mir-glioblastoma.png
+  image_type: project
+  image_alt: miR-glioblastoma
+  number: 11
+- title: Uspostavljanje kompatibilnih institucionalnih registara i mreže savetovališta za nasledne gastrointestinalne tumore
+  acronym: hereditary-GI-tumours
+  duration: 2 godine
+  years: 2019-2021
+  abstract: Uspostavlja kompatibilne institucionalne registre i mrežu centara za genetičko savetovanje za nasledne gastrointestinalne tumore, podržavajući rano otkrivanje i prevenciju u porodicama pod rizikom.
+  link: https://imgge.bg.ac.rs/en/research/projects-imgge/projects?view=article&layout=edit&id=1904:establishment-of-compatible-institutional-registers-and-network-of-counseling-centers-for-hereditary-gastrointestinal-tumors&catid=47
+  image_source: https://imgge.bg.ac.rs/templates/yootheme/cache/70/imggi-mali-707e7bc2.png
+  image: /assets/images/projects/sr/12-hereditary-gi-tumours.png
+  image_type: project
+  image_alt: hereditary-GI-tumours
+  number: 12
+- title: Predviđanje efikasnosti lečenja karcinoma pomoću nanomaterijala osetljivih na stimuluse
+  acronym: PRECAST
+  duration: 2 godine
+  years: 2020-2022
+  abstract: Nacionalni projekat koji razvija nanomaterijale za ciljanje tumora mozga kao MRI kontrastna sredstva za multiformni glioblastom, sa ciljem podrške efikasnijem ciljanju tumora, snimanju i personalizovanoj terapiji.
+  link: https://biosens.rs/en/projects/prediction-of-cancer-treatment-effectiveness-with-stimuli-responsive-nanomaterials
+  image_source: https://api.biosens.rs/wp-content/uploads/2021/06/PRECAST-LOGO.png
+  image: /assets/images/projects/sr/13-precast.png
+  image_type: project
+  image_alt: PRECAST
+  number: 13
+- title: Prenamena lekova kod duktalnog adenokarcinoma pankreasa
+  acronym: REPANCAN
+  duration: 2 godine
+  years: 2020-2022
+  abstract: PROMIS projekat čiji je cilj smanjenje troškova i vremena razvoja lekova za karcinom pankreasa kroz prenamenu lekova, sa fokusom na agoniste imidazolinskih receptora, prognostičke markere i potencijalne terapijske mete.
+  link: https://www.repancan.com/
+  image_source: https://www.repancan.com/
+  image: /assets/images/projects/sr/14-repancan.png
+  image_type: project
+  image_alt: REPANCAN
+  number: 14
+- title: Umrežavanje (Twinning) za evropski konzorcijum istraživačkih institucija za karcinom rektuma kroz jačanje naučne, tehnološke i inovacione izvrsnosti IORS-a
+  acronym: STEPUPIORS
+  duration: 3 godine
+  years: 2022-2025
+  abstract: Horizon Europe Twinning projekat koji uspostavlja evropski konzorcijum za istraživanje karcinoma rektuma usmeren na prognostičke i prediktivne biomarkere kod lokalno uznapredovalog karcinoma rektuma, jačajući istraživačke kapacitete IORS-a i podržavajući bolje odlučivanje u lečenju.
+  link: https://www.stepupiors.eu/
+  image_source: https://www.stepupiors.eu/
+  image: /assets/images/projects/sr/15-stepupiors.png
+  image_type: project
+  image_alt: STEPUPIORS
+  number: 15
+- title: Antiinflamatorna dijetetska intervencija kod pacijentkinja sa karcinomom dojke koje primaju inhibitore aromataze
+  acronym: AID
+  duration: 3 godine
+  years: 2023-2026
+  abstract: PRISMA projekat koji ispituje antiinflamatornu dijetetsku intervenciju kod pacijentkinja sa karcinomom dojke koje primaju inhibitore aromataze, sa ciljem poboljšanja ishoda lečenja, neželjenih efekata, kvaliteta života i pokazatelja preživljavanja.
+  link: https://aid.imi.bg.ac.rs/
+  image_source: https://aid.imi.bg.ac.rs/
+  image: /assets/images/projects/sr/16-aid.png
+  image_type: project
+  image_alt: AID
+  number: 16
+- title: Višeslojni pristup proučavanju hroničnih rana zasnovan na kliničkoj i biološkoj proceni uz razvoj novih personalizovanih terapijskih pristupa korišćenjem in vitro i in vivo eksperimentalnih modela
+  acronym: CHRONOWOUND
+  duration: 2 godine
+  years: 2024-2026
+  abstract: PRISMA projekat koji razvija personalizovane pristupe lečenju hroničnih rana zasnovane na kliničkoj i biološkoj proceni i eksperimentalnim modelima. Širi je od onkologije, ali relevantan za translacione inovacije u zdravstvu usmerene na pacijenta.
+  link: https://chronowound.com/
+  image_source: https://chronowound.com/
+  image: /assets/images/projects/sr/17-chronowound.png
+  image_type: project
+  image_alt: CHRONOWOUND
+  number: 17

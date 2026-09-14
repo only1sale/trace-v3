@@ -1,0 +1,47 @@
+{% assign search_ui = site.data.search %}
+{% assign search_index_url = "/search-index.json" | relative_url %}
+
+<div class="site-search" data-site-search data-index-url="{{ search_index_url }}" data-base-url="{{ site.baseurl }}" data-lang="sr">
+  <div class="site-search-intro">
+    <p>{{ search_ui.intro }}</p>
+  </div>
+
+  <form class="site-search-form" role="search" action="" method="get" data-search-form>
+    <label for="site-search-input">{{ search_ui.label }}</label>
+    <div class="site-search-control">
+      <span class="icon solid fa-search site-search-control-icon" aria-hidden="true"></span>
+      <input
+        id="site-search-input"
+        name="q"
+        type="search"
+        inputmode="search"
+        autocomplete="off"
+        spellcheck="false"
+        placeholder="{{ search_ui.placeholder }}"
+        data-search-input
+      />
+      <button type="submit" class="button site-search-submit">{{ search_ui.button }}</button>
+    </div>
+  </form>
+
+  <div
+    class="site-search-status"
+    role="status"
+    aria-live="polite"
+    data-search-status
+    data-start-text="{{ search_ui.start | escape }}"
+    data-loading-text="{{ search_ui.loading | escape }}"
+    data-error-text="{{ search_ui.error | escape }}"
+    data-no-results-text="{{ search_ui.no_results | escape }}"
+    data-result-one="{{ search_ui.results_one | escape }}"
+    data-result-many="{{ search_ui.results_many | escape }}"
+  >{{ search_ui.loading }}</div>
+
+  <div
+    class="site-search-results"
+    data-search-results
+    data-open-label="{{ search_ui.open_result | escape }}"
+    data-page-label="{{ search_ui.type_page | escape }}"
+    data-post-label="{{ search_ui.type_post | escape }}"
+  ></div>
+</div>

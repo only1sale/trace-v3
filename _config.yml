@@ -1,0 +1,14 @@
+title: TRACE platforma znanja — Srbija
+description: Pouzdane informacije, znanje i inicijative o prevenciji i ranom otkrivanju raka u Srbiji.
+baseurl: ""
+url: ""
+
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+sass:
+  sourcemap: never
+
+future: true

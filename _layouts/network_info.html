@@ -1,0 +1,36 @@
+---
+layout: default
+---
+{% assign toc_label = "Na ovoj strani" %}
+
+<main class="wrapper platform-main network-info-main">
+  <div class="container network-info-shell" id="main">
+    <article id="content" class="platform-content network-info-content">
+      {{ content }}
+    </article>
+
+    {% if page.on_this_page %}
+    <aside class="cancer-page-toc network-page-toc" aria-label="{{ toc_label }}">
+      <div class="cancer-toc-card">
+        <div class="cancer-toc-title">{{ toc_label }}</div>
+        <nav>
+          {% for item in page.on_this_page %}
+            {% if item.children and item.children.size > 0 %}
+              <div class="cancer-toc-group">
+                <a class="cancer-toc-parent" href="#{{ item.id }}">{{ item.title }}</a>
+                <div class="cancer-toc-subnav">
+                  {% for child in item.children %}
+                    <a href="#{{ child.id }}">{{ child.title }}</a>
+                  {% endfor %}
+                </div>
+              </div>
+            {% else %}
+              <a href="#{{ item.id }}">{{ item.title }}</a>
+            {% endif %}
+          {% endfor %}
+        </nav>
+      </div>
+    </aside>
+    {% endif %}
+  </div>
+</main>

@@ -1,0 +1,58 @@
+{% assign glossary = site.data.cancer_glossary %}
+{% assign search_label = "Pretražite rečnik" %}{% assign placeholder = "Unesite pojam, npr. metastaza, biopsija, skrining…" %}{% assign empty_label = "Nema pojma koji odgovara unetoj pretrazi." %}
+
+<div class="glossary-tools">
+  <label for="glossary-search">{{ search_label }}</label>
+  <input id="glossary-search" type="search" placeholder="{{ placeholder }}" autocomplete="off" />
+</div>
+
+<div id="glossary-groups" class="glossary-groups">
+  {% for group in glossary.groups %}
+    {% assign group_id = 'glossary-group-' | append: forloop.index %}
+    <section class="glossary-group" id="{{ group_id }}" data-glossary-group>
+      <h2>{{ group.title }}</h2>
+      {% if group.remember or forloop.last %}
+        <div class="remember-grid">
+          {% for item in group.items %}<div class="remember-card" data-glossary-item>{{ item.text }}</div>{% endfor %}
+        </div>
+      {% else %}
+        <dl class="glossary-list">
+          {% for item in group.items %}
+            <div class="glossary-entry" data-glossary-item>
+              <dt>{{ item.term }}</dt>
+              <dd>{{ item.definition }}{% if item.details %}<ul>{% for detail in item.details %}<li>{{ detail }}</li>{% endfor %}</ul>{% endif %}</dd>
+            </div>
+          {% endfor %}
+        </dl>
+      {% endif %}
+    </section>
+  {% endfor %}
+</div>
+<p id="glossary-empty" class="glossary-empty" hidden>{{ empty_label }}</p>
+
+<script>
+(function () {
+  var input = document.getElementById('glossary-search');
+  if (!input) return;
+  var groups = Array.prototype.slice.call(document.querySelectorAll('[data-glossary-group]'));
+  var empty = document.getElementById('glossary-empty');
+  function normalize(value) {
+    return (value || '').toLocaleLowerCase('sr').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+  input.addEventListener('input', function () {
+    var query = normalize(input.value.trim());
+    var totalVisible = 0;
+    groups.forEach(function (group) {
+      var visibleInGroup = 0;
+      group.querySelectorAll('[data-glossary-item]').forEach(function (item) {
+        var match = !query || normalize(item.textContent).indexOf(query) !== -1;
+        item.hidden = !match;
+        if (match) visibleInGroup++;
+      });
+      group.hidden = visibleInGroup === 0;
+      totalVisible += visibleInGroup;
+    });
+    empty.hidden = totalVisible !== 0;
+  });
+})();
+</script>

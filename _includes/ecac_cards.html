@@ -1,0 +1,12 @@
+{% assign ecac = site.data.ecac %}
+<div class="ecac-grid" aria-label="{{ ecac.source_title | escape }}">
+  {% for item in ecac.items %}
+    <section class="ecac-card">
+      <div class="ecac-number" aria-hidden="true">{{ forloop.index }}</div>
+      <div class="ecac-card-body">
+        <h3>{{ item.title }}</h3>
+        {% for paragraph in item.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+      </div>
+    </section>
+  {% endfor %}
+</div>

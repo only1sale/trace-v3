@@ -1,0 +1,151 @@
+intro: Ovaj rečnik objašnjava najvažnije pojmove koji se koriste kada govorimo o raku, njegovoj prevenciji, simptomima, ranom otkrivanju, skriningu i dijagnostici. Objašnjenja su prilagođena građanima i ne predstavljaju zamenu za savet i objašnjenje lekara.
+groups:
+- title: RAZUMEVANJE RAKA
+  items:
+  - term: Rak
+    definition: Rak je naziv za grupu bolesti kod kojih ćelije počinju da rastu i dele se nekontrolisano. Kancerogene ćelije mogu da urastaju u okolna tkiva i, kod nekih vrsta raka, da se prošire i na druge delove tela.
+  - term: Ćelija
+    definition: Najmanja funkcionalna jedinica našeg organizma. Naše telo je izgrađeno od milijardi ćelija koje normalno rastu, dele se i odumiru prema potrebama organizma.
+  - term: Kancerogena ćelija
+    definition: Ćelija koja je izgubila normalnu kontrolu rasta i deobe i može da formira tumor ili da se širi u druga tkiva.
+  - term: Tumor
+    definition: Nakupina abnormalnih ćelija koja nastaje kada se ćelije prekomerno dele. Tumor može biti dobroćudan ili maligan. Nisu svi tumori rak.
+  - term: Dobroćudan (benigni) tumor
+    definition: Tumor koji nije kancerogen. Obično ne urasta u okolna tkiva i ne širi se na udaljene delove tela.
+  - term: Maligni tumor
+    definition: Kancerogeni tumor. Može da raste u okolna tkiva i da se, u zavisnosti od vrste raka, proširi na druge delove tela.
+  - term: Primarni tumor
+    definition: Tumor koji nastaje na mestu na kojem je rak prvi put počeo da se razvija.
+  - term: Metastaza
+    definition: Širenje kancerogenih ćelija iz mesta na kojem je rak nastao u druge delove tela.
+  - term: Metastatski rak
+    definition: Rak koji se proširio sa mesta nastanka na udaljeni deo tela.
+  - term: Invazija / lokalno širenje
+    definition: Širenje kancerogenih ćelija iz tumora u okolna tkiva.
+  - term: Limfni čvorovi
+    definition: Male strukture koje su deo limfnog sistema i pomažu organizmu u odbrani od infekcija. Kod nekih vrsta raka kancerogene ćelije mogu da se prošire u obližnje limfne čvorove.
+  - term: Limfni sistem
+    definition: Mreža limfnih sudova, limfnih čvorova i drugih organa koja učestvuje u odbrani organizma i uklanjanju viška tečnosti iz tkiva.
+- title: KAKO NASTAJE RAK?
+  items:
+  - term: DNK
+    definition: Molekul koji sadrži genetske informacije potrebne za funkcionisanje, rast i razmnožavanje ćelija.
+  - term: Gen
+    definition: Deo DNK koji sadrži uputstvo za određene osobine i funkcije ćelije.
+  - term: Genetska promena (mutacija)
+    definition: Promena u DNK ćelije. Neke genetske promene mogu uticati na kontrolu rasta i deobe ćelija i doprineti nastanku raka.
+  - term: Nasledna genetska promena
+    definition: Genetska promena koja se može preneti sa roditelja na dete. Neke nasledne promene mogu povećati rizik od određenih vrsta raka.
+  - term: Stečena genetska promena
+    definition: Genetska promena koja nastaje tokom života u pojedinačnoj ćeliji. Nije nasleđena od roditelja i može nastati, između ostalog, pod uticajem različitih faktora iz okruženja ili slučajnih grešaka pri deobi ćelija.
+  - term: Genetska predispozicija
+    definition: Povećana sklonost ka razvoju određene bolesti koja može biti povezana sa naslednim genetskim osobinama.
+  - term: Faktor rizika
+    definition: Osobina, navika, stanje ili izloženost koja može povećati verovatnoću nastanka bolesti.
+  - term: Kancerogen
+    definition: Supstanca, zračenje ili drugi faktor koji može izazvati genetske promene i povećati rizik od nastanka raka.
+  - term: Rizik od raka
+    definition: Verovatnoća da će osoba tokom života razviti određenu vrstu raka. Rizik zavisi od više faktora, uključujući godine, nasledne osobine, način života i izloženost faktorima iz okruženja.
+  - term: Prevencija raka
+    definition: Mere koje mogu pomoći da se smanji rizik od nastanka raka, kao što su izbegavanje poznatih faktora rizika i usvajanje zdravih životnih navika.
+  - term: Genetsko testiranje
+    definition: ispituje određene gene ili specifične promene u njima. Genetsko i genomsko testiranje može imati različite svrhe, uključujući procenu rizika za određene nasledne bolesti, izbor odgovarajućeg lečenja ili bolje razumevanje karakteristika tumora.
+  - term: Genomsko testiranje
+    definition: proučava mnogo veći broj gena, odnosno celokupni genetski materijal osobe, u zavisnosti od vrste testa. Genetsko i genomsko testiranje može imati različite svrhe, uključujući procenu rizika za određene nasledne bolesti, izbor odgovarajućeg lečenja ili bolje razumevanje karakteristika tumora.
+- title: ZNACI I SIMPTOMI
+  items:
+  - term: Simptom
+    definition: Promena ili tegoba koju osoba sama oseća ili primećuje, kao što su bol, neobičan umor, kašalj ili otežano gutanje.
+  - term: Znak bolesti
+    definition: Promena koju može da primeti ili izmeri druga osoba, najčešće zdravstveni radnik, kao što su uvećan limfni čvor ili promena u rezultatu laboratorijskog testa.
+  - term: Znaci i simptomi raka
+    definition: Promene koje mogu biti povezane sa rakom. Mogu biti različite u zavisnosti od vrste i mesta nastanka raka. Važno je znati da mnogi simptomi nisu posledica raka, ali neuobičajene ili dugotrajne promene treba proveriti sa lekarom.
+  - term: Rano otkrivanje
+    definition: Otkrivanje raka u ranoj fazi, kada je bolest manja i nije se proširila ili se proširila u manjoj meri. Kod mnogih vrsta raka rano otkrivanje omogućava veće mogućnosti za uspešno lečenje.
+  - term: Sumnjiva promena
+    definition: Promena koja po svojim karakteristikama zahteva dodatni pregled ili ispitivanje. Sama sumnjiva promena ne znači da osoba ima rak.
+- title: PREVENCIJA I SKRINING
+  items:
+  - term: Primarna prevencija
+    definition: Sve što možemo da uradimo kako bismo sprečili nastanak bolesti ili smanjili rizik od njenog nastanka.
+  - term: Sekundarna prevencija
+    definition: Mere kojima se bolest nastoji otkriti što ranije, pre nego što izazove ozbiljne tegobe ili uznapreduje.
+  - term: Skrining
+    definition: Pregledi i testovi kojima se određene bolesti ili promene traže kod osoba koje nemaju simptome, kako bi se bolest otkrila dovoljno rano.
+  - term: Program skrininga
+    definition: Organizovan sistem pregleda namenjen određenoj grupi stanovništva, najčešće prema uzrastu i polu, koji se sprovodi prema utvrđenim stručnim preporukama.
+  - term: Pozitivan skrining test
+    definition: Rezultat skrining testa koji ukazuje da je potrebna dodatna provera. Pozitivan rezultat skrininga ne znači automatski da osoba ima rak.
+  - term: Lažno pozitivan rezultat
+    definition: Rezultat testa koji ukazuje na moguću bolest iako osoba zapravo nema tu bolest.
+  - term: Lažno negativan rezultat
+    definition: Rezultat testa koji ne pokazuje bolest iako je ona prisutna.
+  - term: Dijagnostički pregled
+    definition: Pregled ili test koji se radi kada postoje simptomi, znaci bolesti ili drugi nalazi koji zahtevaju dodatnu proveru, sa ciljem da se utvrdi uzrok problema i postavi dijagnoza.
+  - term: Skrining nije isto što i dijagnostika.
+    definition: Skrining se najčešće radi kod osoba koje nemaju simptome, dok se dijagnostički pregledi rade kada postoji razlog za sumnju na bolest.
+- title: POSTAVLJANJE DIJAGNOZE
+  items:
+  - term: Dijagnoza
+    definition: Utvrđivanje da li osoba ima određenu bolest i o kojoj bolesti je reč, na osnovu simptoma, pregleda i rezultata različitih testova.
+  - term: Medicinski pregled
+    definition: Pregled zdravstvenog stanja osobe koji uključuje razgovor sa lekarom i, po potrebi, pregled tela i dodatne testove.
+  - term: Biopsija
+    definition: Uzimanje malog uzorka tkiva ili ćelija radi pregleda pod mikroskopom. Biopsija je važan način za potvrđivanje mnogih vrsta raka.
+  - term: Patohistološki pregled
+    definition: Pregled uzorka tkiva pod mikroskopom kojim se utvrđuje da li postoje kancerogene promene i kakve su njihove osobine.
+  - term: Citologija
+    definition: Pregled pojedinačnih ćelija pod mikroskopom radi otkrivanja abnormalnih ili kancerogenih promena.
+  - term: Laboratorijski testovi
+    definition: Analize krvi, urina ili drugih uzoraka koje mogu pružiti informacije o zdravstvenom stanju i pomoći u postavljanju ili praćenju dijagnoze.
+  - term: Tumorski marker
+    definition: Supstanca koja se može pronaći u krvi, urinu ili tkivu i koja kod nekih vrsta raka može pružiti dodatne informacije. Tumorski marker sam po sebi najčešće nije dovoljan za postavljanje dijagnoze raka.
+- title: SNIMANJE I DIJAGNOSTIČKE METODE
+  items:
+  - term: Imidžing dijagnostika
+    definition: Metode kojima se dobijaju slike unutrašnjih organa i tkiva, kao što su rendgen, ultrazvuk, CT i magnetna rezonanca.
+  - term: Rendgen
+    definition: Metoda snimanja koja koristi rendgenske zrake za prikaz unutrašnjih struktura tela.
+  - term: Ultrazvuk
+    definition: Metoda snimanja koja koristi zvučne talase za prikaz organa i tkiva.
+  - term: CT (kompjuterizovana tomografija)
+    definition: Metoda snimanja koja koristi rendgenske zrake za stvaranje detaljnih slika unutrašnjih struktura tela.
+  - term: MRI / magnetna rezonanca
+    definition: Metoda snimanja koja koristi jako magnetno polje i radio-talase za dobijanje detaljnih slika organa i tkiva.
+  - term: Endoskopski pregled
+    definition: Pregled unutrašnjosti određenog organa ili dela tela pomoću tankog instrumenta sa kamerom koji se uvodi kroz prirodni otvor ili mali rez.
+  - term: PET skeniranje
+    definition: Metoda snimanja koja koristi malu količinu radioaktivne supstance kako bi se prikazale oblasti u telu sa određenom metaboličkom aktivnošću. Često se koristi zajedno sa CT pregledom.
+  - term: PET/CT
+    definition: Kombinovana metoda koja povezuje informacije o metaboličkoj aktivnosti tkiva sa detaljnim anatomskim prikazom dobijenim CT snimanjem.
+- title: STADIJUM I OSOBINE RAKA
+  items:
+  - term: Stadijum raka
+    definition: Opisuje koliko se rak proširio u trenutku postavljanja dijagnoze. U određivanju stadijuma uzimaju se u obzir veličina i lokalno širenje tumora, zahvaćenost limfnih čvorova i prisustvo metastaza.
+  - term: Gradus (stepen malignosti)
+    definition: Opisuje koliko se kancerogene ćelije razlikuju od normalnih ćelija i daje informacije o tome koliko agresivno tumor može da se ponaša.
+  - term: TNM klasifikacija
+    definition: 'Sistem koji se koristi za opisivanje proširenosti mnogih vrsta raka:'
+    details:
+    - T – veličina tumora i njegovo lokalno širenje;
+    - N – zahvaćenost obližnjih limfnih čvorova;
+    - M – prisustvo metastaza, odnosno širenje raka u udaljene delove tela.
+  - term: Lokalizovan rak
+    definition: Rak koji je ograničen na organ ili područje u kojem je nastao.
+  - term: Lokalno uznapredovali rak
+    definition: Rak koji se proširio izvan organa u kojem je nastao, ali nema dokaza o širenju na udaljene organe.
+  - term: Metastatski rak
+    definition: Rak koji se proširio iz mesta nastanka u udaljeni deo tela.
+  - term: Progresija bolesti
+    definition: Napredovanje bolesti, koje može uključivati rast tumora ili njegovo širenje.
+  - term: Recidiv / povratak bolesti
+    definition: Ponovna pojava raka nakon perioda kada se bolest nije mogla utvrditi.
+  - term: Remisija
+    definition: Stanje u kojem su znaci i simptomi bolesti smanjeni ili se više ne mogu utvrditi. Remisija može biti potpuna ili delimična.
+- title: VAŽNO JE ZAPAMTITI
+  items:
+  - text: Rak nije jedna bolest. Postoji veliki broj različitih vrsta raka i one se mogu razlikovati po načinu nastanka, brzini rasta, mogućnosti širenja i odgovoru na lečenje.
+  - text: Sumnjiva promena ne znači da osoba ima rak. Za postavljanje dijagnoze potrebna je stručna procena i, kada je potrebno, dodatno ispitivanje.
+  - text: Skrining nije isto što i dijagnostički pregled. Skrining je namenjen osobama koje nemaju simptome, dok se dijagnostički pregledi rade kada postoji razlog za sumnju na bolest.
+  - text: Rano otkrivanje je važno. Kod mnogih vrsta raka bolest je lakše i uspešnije lečiti kada se otkrije u ranijoj fazi.
+  - text: Ako primetite neuobičajenu ili dugotrajnu promenu, obratite se lekaru. Nemojte pokušavati sami da postavite dijagnozu na osnovu jednog simptoma ili rezultata jednog testa.

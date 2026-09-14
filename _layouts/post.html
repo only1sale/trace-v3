@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<main class="wrapper platform-main{% if page.author_name or page.author_image %} expert-post-main{% endif %}">
+    <div class="container" id="main">
+        {% if page.author_name or page.author_image %}
+        <div class="expert-post-layout">
+            <article class="platform-content post-content">
+                <p class="post-date"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d.%m.%Y." }}</time></p>
+                {{ content }}
+            </article>
+            <aside class="expert-author-panel" aria-label="O autoru">
+                {% if page.author_image %}
+                <img class="expert-author-panel-image image featured" src="{{ page.author_image | relative_url }}" alt="{{ page.author_image_alt | default: page.author_name | escape }}">
+                {% endif %}
+                <div class="expert-author-panel-body">
+                    <span class="expert-author-label">O autoru</span>
+                    {% if page.author_name %}<h2>{{ page.author_name }}</h2>{% endif %}
+                    {% if page.author_role %}<p class="expert-author-role">{{ page.author_role }}</p>{% endif %}
+                    {% if page.author_affiliation %}<p>{{ page.author_affiliation }}</p>{% endif %}
+                </div>
+            </aside>
+        </div>
+        {% else %}
+        <article class="platform-content post-content">
+            <p class="post-date"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d.%m.%Y." }}</time></p>
+            {{ content }}
+        </article>
+        {% endif %}
+    </div>
+</main>

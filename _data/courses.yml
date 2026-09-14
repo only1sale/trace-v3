@@ -1,0 +1,8 @@
+intro: Kursevi se realizuju na Moodle platformi. Ovde se nalazi kratak pregled dostupnih kurseva i direktan link za pristup.
+link_label: Otvori kurs na Moodle-u
+courses:
+- title: AI in Breast Cancer Care
+  description: Uvodni kurs o primeni veštačke inteligencije u zdravstvenoj zaštiti kod raka dojke, sa fokusom na mogućnosti primene u dijagnostici, podršci kliničkom odlučivanju i organizaciji nege.
+  url: http://localhost:8000/course/view.php?id=3
+  image: /assets/images/trace-general/trace-4.jpg
+  image_alt: Zdravstveni radnik u razgovoru sa pacijentkinjom

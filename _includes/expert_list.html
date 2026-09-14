@@ -1,0 +1,10 @@
+{% assign read_more = "Pročitaj tekst" %}
+<div class="expert-list">
+{% assign expert_posts = site.posts | where: "content_section", "expert" %}
+{% for post in expert_posts %}
+  <article class="expert-card">
+    <a class="expert-author-image" href="{{ post.url | relative_url }}"><img class="image featured" src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title | escape }}"></a>
+    <div class="expert-card-body"><h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2><p>{{ post.summary | default: post.excerpt | strip_html }}</p><a class="button" href="{{ post.url | relative_url }}">{{ read_more }}</a></div>
+  </article>
+{% endfor %}
+</div>

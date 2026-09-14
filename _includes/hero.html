@@ -1,0 +1,20 @@
+{% assign hero = site.data.hero %}
+
+{% if page.layout == "home" %}
+<section id="hero" class="platform-hero platform-hero-home">
+    <div class="container hero-inner">
+        <h1>{{ hero.title }}</h1>
+        <p>{{ hero.text }}</p>
+    </div>
+</section>
+{% else %}
+<section id="hero" class="platform-hero platform-hero-page">
+    <div class="container hero-inner">
+        <p class="hero-kicker">TRACE platforma znanja — Srbija</p>
+        <h1>{{ page.hero_title | default: page.title }}</h1>
+        {% if page.hero_text or page.subtitle %}
+            <p>{{ page.hero_text | default: page.subtitle }}</p>
+        {% endif %}
+    </div>
+</section>
+{% endif %}

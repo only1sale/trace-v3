@@ -1,0 +1,45 @@
+---
+layout: default
+---
+{% assign menu = site.data.navigation.items %}
+{% assign section = nil %}
+{% for nav_item in menu %}
+  {% if nav_item.key == page.nav_section %}{% assign section = nav_item %}{% endif %}
+{% endfor %}
+{% assign toc_label = "Na ovoj strani" %}
+
+<main class="wrapper platform-main cancer-info-main">
+  <div class="container cancer-info-shell" id="main">
+    <aside class="cancer-section-nav" aria-label="{{ section.title | default: page.title | escape }}">
+      <div class="cancer-side-card">
+        <div class="cancer-side-title">{{ section.title | default: page.title }}</div>
+        <nav>
+          {% if section.children %}
+            {% for child in section.children %}
+              <a href="{{ child.url | relative_url }}"{% if page.url == child.url or page.permalink == child.url or page.title == child.title %} class="active" aria-current="page"{% endif %}>{{ child.title }}</a>
+            {% endfor %}
+          {% elsif section.url %}
+            <a href="{{ section.url | relative_url }}" class="active" aria-current="page">{{ section.title }}</a>
+          {% endif %}
+        </nav>
+      </div>
+    </aside>
+
+    <article id="content" class="platform-content cancer-info-content{% if page.wide_content %} platform-content-wide{% endif %}">
+      {{ content }}
+    </article>
+
+    {% if page.on_this_page %}
+    <aside class="cancer-page-toc" aria-label="{{ toc_label }}">
+      <div class="cancer-toc-card">
+        <div class="cancer-toc-title">{{ toc_label }}</div>
+        <nav>
+          {% for item in page.on_this_page %}
+            <a href="#{{ item.id }}">{{ item.title }}</a>
+          {% endfor %}
+        </nav>
+      </div>
+    </aside>
+    {% endif %}
+  </div>
+</main>

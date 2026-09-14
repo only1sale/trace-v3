@@ -1,0 +1,17 @@
+url: /pretraga/
+nav_label: PRETRAGA
+nav_aria: Pretražite sajt
+heading: Pretraga sadržaja
+intro: Pretražite sadržaj platforme prema naslovu, temi ili ključnom pojmu.
+label: Pojam za pretragu
+placeholder: 'Na primer: skrining, prevencija, rak dojke…'
+button: Pretraži
+start: Unesite najmanje dva znaka da biste započeli pretragu.
+loading: Učitavanje indeksa za pretragu…
+error: Pretraga trenutno nije dostupna. Pokušajte ponovo nakon osvežavanja stranice.
+no_results: Nema rezultata za uneti pojam.
+results_one: rezultat
+results_many: rezultata
+open_result: Otvori stranicu
+type_page: Stranica
+type_post: Tekst

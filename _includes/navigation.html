@@ -1,0 +1,45 @@
+{% assign menu = site.data.navigation.items %}
+{% assign current_path = page.url | default: "/" %}
+{% assign search_ui = site.data.search %}
+
+<nav id="nav" aria-label="Glavna navigacija" data-home-url="{{ '/' | relative_url }}">
+    <ul>
+        {% for item in menu %}
+            {% assign item_active = false %}
+            {% if page.nav_section and page.nav_section == item.key %}
+                {% assign item_active = true %}
+            {% elsif item.url and current_path == item.url %}
+                {% assign item_active = true %}
+            {% elsif item.children %}
+                {% for child in item.children %}
+                    {% if current_path == child.url %}
+                        {% assign item_active = true %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+
+            <li class="nav-item{% if item_active %} current{% endif %}{% if item.children %} has-children{% endif %}">
+                {% if item.url %}
+                    <a href="{{ item.url | relative_url }}"{% if item.external %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ item.title }}</a>
+                {% else %}
+                    <a href="#" aria-haspopup="true">{{ item.title }}</a>
+                {% endif %}
+
+                {% if item.children %}
+                    <ul>
+                        {% for child in item.children %}
+                            <li><a href="{{ child.url | relative_url }}"{% if child.external %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ child.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+
+        <li class="search-menu{% if page.nav_section == 'search' %} current{% endif %}">
+            <a class="site-search-nav-link" href="{{ search_ui.url | relative_url }}" aria-label="{{ search_ui.nav_aria | escape }}" title="{{ search_ui.nav_aria | escape }}">
+                <span class="icon solid fa-search" aria-hidden="true"></span>
+                <span class="site-search-nav-text">{{ search_ui.nav_label }}</span>
+            </a>
+        </li>
+    </ul>
+</nav>

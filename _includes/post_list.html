@@ -1,0 +1,92 @@
+{% assign read_more = "Pročitaj više" %}
+{% assign pagination_label = "Stranice vesti" %}
+
+<!-- News and Events -->
+<div class="wrapper">
+    <div class="container">
+        <div id="post-list" class="row">
+            {% for post in site.posts %}
+                {% if post.content_section != "expert" %}
+                    {% assign post_image = post.image | default: "/assets/images/default-news.jpg" %}
+                    <section class="post-card col-6 col-12-narrower feature">
+                        <div class="image-wrapper">
+                            <a href="{{ post.url | relative_url }}" class="image featured">
+                                <img class="image featured" src="{{ post_image | relative_url }}" alt="{{ post.image_alt | default: post.title | escape }}" loading="lazy" />
+                            </a>
+                        </div>
+                        <header><h2>{{ post.title }}</h2></header>
+                        <p>{% if post.summary %}{{ post.summary }}{% else %}{{ post.excerpt | strip_html | truncatewords: 35 }}{% endif %}</p>
+                        <ul class="actions"><li><a href="{{ post.url | relative_url }}" class="button">{{ read_more }}</a></li></ul>
+                    </section>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <nav id="post-pagination" class="content-pagination" aria-label="{{ pagination_label }}" hidden>
+            <ul class="actions special"></ul>
+        </nav>
+    </div>
+</div>
+
+<style>
+    #post-list .post-card { margin-bottom: 3em; }
+    #post-list .image.featured img { display:block; width:100%; height:280px; object-fit:cover; }
+    #post-pagination .actions { display:flex; justify-content:center; flex-wrap:wrap; gap:.5em; }
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const posts = Array.from(document.querySelectorAll("#post-list .post-card"));
+    const pagination = document.getElementById("post-pagination");
+    if (!pagination) return;
+    const paginationList = pagination.querySelector("ul");
+    const postsPerPage = 8;
+    const pageCount = Math.ceil(posts.length / postsPerPage);
+
+    if (pageCount <= 1) {
+        posts.forEach(post => { post.hidden = false; });
+        return;
+    }
+
+    function showPage(pageNumber, updateUrl) {
+        const firstPost = (pageNumber - 1) * postsPerPage;
+        const lastPost = firstPost + postsPerPage;
+        posts.forEach((post, index) => { post.hidden = index < firstPost || index >= lastPost; });
+        paginationList.querySelectorAll("a[data-page]").forEach(link => {
+            link.classList.toggle("primary", Number(link.dataset.page) === pageNumber);
+            if (Number(link.dataset.page) === pageNumber) link.setAttribute("aria-current", "page");
+            else link.removeAttribute("aria-current");
+        });
+        if (updateUrl) {
+            const url = new URL(window.location.href);
+            if (pageNumber === 1) url.searchParams.delete("page");
+            else url.searchParams.set("page", pageNumber);
+            window.history.pushState({ page: pageNumber }, "", url);
+        }
+    }
+
+    for (let pageNumber = 1; pageNumber <= pageCount; pageNumber += 1) {
+        const item = document.createElement("li");
+        const link = document.createElement("a");
+        link.href = "?page=" + pageNumber;
+        link.className = "button small";
+        link.dataset.page = pageNumber;
+        link.textContent = pageNumber;
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            showPage(pageNumber, true);
+            document.getElementById("post-list").scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+        item.appendChild(link);
+        paginationList.appendChild(item);
+    }
+
+    function requestedPage() {
+        const value = Number(new URLSearchParams(window.location.search).get("page"));
+        return value >= 1 && value <= pageCount ? value : 1;
+    }
+    pagination.hidden = false;
+    showPage(requestedPage(), false);
+    window.addEventListener("popstate", () => showPage(requestedPage(), false));
+});
+</script>

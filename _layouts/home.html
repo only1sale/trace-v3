@@ -1,0 +1,17 @@
+---
+layout: default
+body_class: "homepage is-preload"
+---
+{% include home_sections.html %}
+<section class="home-news wrapper">
+  <div class="container">
+    <header class="section-heading compact">
+      {% assign news_heading = "Vesti i aktuelnosti" %}
+      <h2>{{ news_heading }}</h2>
+    </header>
+    {% assign homepage = site.data.homepage %}
+    {% if homepage.news_callout %}<a class="news-callout" href="{{ homepage.news_callout_url }}" target="_blank" rel="noopener">{{ homepage.news_callout }} <span aria-hidden="true">→</span></a>{% endif %}
+  </div>
+  {% include post_list.html %}
+</section>
+{% if content != "" %}<div class="wrapper home-extra-content"><div class="container">{{ content }}</div></div>{% endif %}

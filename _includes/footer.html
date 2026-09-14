@@ -1,0 +1,35 @@
+{% assign footer = site.data.footer %}
+{% assign contact_url = "/kontakt/" %}
+{% assign about_url = "/o-nama/" %}
+
+<footer id="footer-wrapper">
+    <div id="footer" class="container platform-footer-grid">
+        <section class="footer-funding">
+            <img class="eu-funded-logo image featured" src="{{ '/assets/images/eu-funded.png' | relative_url }}" alt="Funded by the European Union" />
+            <p>{{ footer.funding }}</p>
+        </section>
+
+        <section>
+            <h2>{{ footer.contact_title }}</h2>
+            <ul class="footer-links">
+                <li><a href="{{ contact_url | relative_url }}">{{ footer.contact }}</a></li>
+                <li><a href="{{ about_url | relative_url }}">{{ footer.about }}</a></li>
+                <li><a href="https://tracecancer.eu/" target="_blank" rel="noopener noreferrer"><span class="icon solid fa-globe" aria-hidden="true"></span>{{ footer.website }}</a></li>
+                <li><a href="https://www.linkedin.com/company/tracecancer/" target="_blank" rel="noopener noreferrer"><span class="icon brands fa-linkedin" aria-hidden="true"></span>{{ footer.linkedin }}</a></li>
+            </ul>
+        </section>
+
+        <section class="footer-policies-placeholder">
+            <h2>{{ footer.policies_title }}</h2>
+            <div class="footer-empty-placeholder" aria-hidden="true"></div>
+        </section>
+
+        <section>
+            <h2>{{ footer.more_title }}</h2>
+            <ul class="footer-links">
+                <li><a href="https://www.skriningsrbija.rs" target="_blank" rel="noopener noreferrer">{{ footer.screening_office }}</a></li>
+                <li><a href="https://www.ncrc.ac.rs" target="_blank" rel="noopener noreferrer">{{ footer.oncology_institute }}</a></li>
+            </ul>
+        </section>
+    </div>
+</footer>

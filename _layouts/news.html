@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<main class="platform-main">
+    {% if content != "" %}
+    <div class="wrapper">
+        <div class="container platform-content">{{ content }}</div>
+    </div>
+    {% endif %}
+    {% include post_list.html %}
+</main>

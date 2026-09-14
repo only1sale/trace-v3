@@ -1,0 +1,225 @@
+{% assign catalog = site.data.projects.projects %}
+{% assign count_label = "projekata i inicijativa" %}
+{% assign acronym_label = "Akronim" %}
+{% assign duration_label = "Trajanje" %}
+{% assign years_label = "Period" %}
+{% assign summary_label = "Sažetak" %}
+{% assign visit_label = "Posetite projekat" %}
+{% assign source_label = "Izvor slike" %}
+
+{% if catalog %}
+<section class="project-catalog" aria-label="{{ page.title }}">
+    <div class="project-catalog-intro project-catalog-intro--compact">
+        <div class="project-catalog-intro-copy">
+            <span class="project-catalog-count">{{ catalog | size }} {{ count_label }}</span>
+            {% if page.catalog_intro %}<p>{{ page.catalog_intro }}</p>{% endif %}
+        </div>
+        {% if page.catalog_image %}
+        <figure class="project-catalog-cover">
+            <img class="image featured" src="{{ page.catalog_image | relative_url }}" alt="{{ page.catalog_image_alt | default: page.title }}" loading="eager" />
+        </figure>
+        {% endif %}
+    </div>
+
+    <div class="project-list">
+        {% for project in catalog %}
+        <article class="project-entry" data-project-entry>
+            <figure class="project-entry-media{% if project.image_type == 'general' %} is-general{% else %} is-project{% endif %}">
+                <img class="image featured" src="{{ project.image | relative_url }}" alt="{{ project.image_alt | default: project.title }}" loading="lazy" />
+                {% if project.image_source and project.image_type == 'project' %}
+                <figcaption>
+                    {% if project.image_source contains 'http://' or project.image_source contains 'https://' %}
+                        <a href="{{ project.image_source }}" target="_blank" rel="noopener noreferrer">{{ source_label }}</a>
+                    {% else %}
+                        {{ source_label }}: {{ project.image_source }}
+                    {% endif %}
+                </figcaption>
+                {% endif %}
+            </figure>
+
+            <div class="project-entry-body">
+                <div class="project-entry-eyebrow">
+                    <span class="project-entry-number">{{ project.number }}</span>
+                    {% if project.acronym %}<span class="project-acronym">{{ project.acronym }}</span>{% endif %}
+                </div>
+
+                <h2>{{ project.title }}</h2>
+
+                <dl class="project-meta">
+                    {% if project.acronym %}
+                    <div><dt>{{ acronym_label }}</dt><dd>{{ project.acronym }}</dd></div>
+                    {% endif %}
+                    {% if project.duration %}
+                    <div><dt>{{ duration_label }}</dt><dd>{{ project.duration }}</dd></div>
+                    {% endif %}
+                    {% if project.years %}
+                    <div><dt>{{ years_label }}</dt><dd>{{ project.years }}</dd></div>
+                    {% endif %}
+                </dl>
+
+                {% if project.abstract %}
+                <div class="project-summary">
+                    <h3>{{ summary_label }}</h3>
+                    <p>{{ project.abstract }}</p>
+                </div>
+                {% endif %}
+
+                {% if project.link %}
+                <a class="project-button" href="{{ project.link }}" target="_blank" rel="noopener noreferrer">
+                    {{ visit_label }} <span aria-hidden="true">↗</span>
+                </a>
+                {% endif %}
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+
+    <nav class="project-pager" data-project-pagination aria-label="Project catalogue pages" hidden>
+        <button type="button" class="project-pager__button project-pager__arrow" data-project-prev aria-label="Previous page">
+            <span aria-hidden="true">‹</span>
+        </button>
+        <div class="project-pager__pages" data-project-pages></div>
+        <button type="button" class="project-pager__button project-pager__arrow" data-project-next aria-label="Next page">
+            <span aria-hidden="true">›</span>
+        </button>
+    </nav>
+</section>
+
+<script>
+(function () {
+    'use strict';
+
+    function initialiseProjectCatalog(catalog) {
+        if (!catalog || catalog.dataset.projectPagerReady === 'true') return;
+
+        var entries = Array.prototype.slice.call(catalog.querySelectorAll('[data-project-entry]'));
+        var pager = catalog.querySelector('[data-project-pagination]');
+        if (!pager || entries.length === 0) return;
+
+        var perPage = 8;
+        var pageCount = Math.ceil(entries.length / perPage);
+        var pagesBox = pager.querySelector('[data-project-pages]');
+        var previousButton = pager.querySelector('[data-project-prev]');
+        var nextButton = pager.querySelector('[data-project-next]');
+        var currentPage = 1;
+        var text = { previous: 'Prethodna strana', next: 'Sledeća strana', page: 'Strana' };
+
+        previousButton.setAttribute('aria-label', text.previous);
+        nextButton.setAttribute('aria-label', text.next);
+        catalog.dataset.projectPagerReady = 'true';
+
+        if (pageCount <= 1) {
+            entries.forEach(function (entry) {
+                entry.hidden = false;
+                entry.classList.remove('is-page-hidden');
+            });
+            return;
+        }
+
+        function clampPage(page) {
+            return Math.max(1, Math.min(pageCount, page));
+        }
+
+        function pageFromUrl() {
+            try {
+                var value = new URL(window.location.href).searchParams.get('projects_page');
+                var parsed = parseInt(value || '1', 10);
+                return Number.isFinite(parsed) ? clampPage(parsed) : 1;
+            } catch (error) {
+                return 1;
+            }
+        }
+
+        function writePageToUrl(page) {
+            try {
+                if (!window.history || !window.history.pushState) return;
+                var url = new URL(window.location.href);
+                if (page === 1) url.searchParams.delete('projects_page');
+                else url.searchParams.set('projects_page', String(page));
+                window.history.pushState({ projectPage: page }, '', url.toString());
+            } catch (error) {
+                /* Pagination still works even if URL state is unavailable. */
+            }
+        }
+
+        function showPage(page, updateUrl, scrollToList) {
+            page = clampPage(page);
+            currentPage = page;
+
+            var firstIndex = (page - 1) * perPage;
+            var lastIndex = firstIndex + perPage;
+
+            entries.forEach(function (entry, index) {
+                var shouldHide = index < firstIndex || index >= lastIndex;
+                entry.hidden = shouldHide;
+                entry.classList.toggle('is-page-hidden', shouldHide);
+            });
+
+            Array.prototype.forEach.call(
+                pagesBox.querySelectorAll('[data-project-page]'),
+                function (button) {
+                    var active = parseInt(button.dataset.projectPage, 10) === page;
+                    button.classList.toggle('is-active', active);
+                    if (active) button.setAttribute('aria-current', 'page');
+                    else button.removeAttribute('aria-current');
+                }
+            );
+
+            previousButton.disabled = page === 1;
+            nextButton.disabled = page === pageCount;
+
+            if (updateUrl) writePageToUrl(page);
+
+            if (scrollToList) {
+                var list = catalog.querySelector('.project-list');
+                if (list) list.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        for (var page = 1; page <= pageCount; page += 1) {
+            var pageButton = document.createElement('button');
+            pageButton.type = 'button';
+            pageButton.className = 'project-pager__button project-pager__page';
+            pageButton.dataset.projectPage = String(page);
+            pageButton.textContent = String(page);
+            pageButton.setAttribute('aria-label', text.page + ' ' + page);
+            pagesBox.appendChild(pageButton);
+        }
+
+        pagesBox.addEventListener('click', function (event) {
+            var pageButton = event.target.closest('[data-project-page]');
+            if (!pageButton || !pagesBox.contains(pageButton)) return;
+            showPage(parseInt(pageButton.dataset.projectPage, 10), true, true);
+        });
+
+        previousButton.addEventListener('click', function () {
+            if (currentPage > 1) showPage(currentPage - 1, true, true);
+        });
+
+        nextButton.addEventListener('click', function () {
+            if (currentPage < pageCount) showPage(currentPage + 1, true, true);
+        });
+
+        window.addEventListener('popstate', function () {
+            showPage(pageFromUrl(), false, false);
+        });
+
+        pager.hidden = false;
+        showPage(pageFromUrl(), false, false);
+    }
+
+    function initialiseAllProjectCatalogs() {
+        Array.prototype.forEach.call(
+            document.querySelectorAll('.project-catalog'),
+            initialiseProjectCatalog
+        );
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initialiseAllProjectCatalogs, { once: true });
+    } else {
+        initialiseAllProjectCatalogs();
+    }
+}());
+</script>
+{% endif %}
